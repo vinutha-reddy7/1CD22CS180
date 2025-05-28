@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Maven
 # Build your Java project and run tests with Apache Maven.
 # Add steps that analyze code, save build artifacts, deploy, and more:
@@ -22,3 +23,17 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
+=======
+trigger:
+  - main  # or 'master' depending on your default branch
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+  - task: Maven@3
+    inputs:
+      mavenPomFile: 'pom.xml'  # adjust if not at root
+      goals: 'clean install'
+
+>>>>>>> e907e5b (Add Azure Pipelines configuration)
