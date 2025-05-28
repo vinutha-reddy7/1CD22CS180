@@ -12,6 +12,9 @@ pool:
 steps:
 - task: Maven@3
   inputs:
+    PathtoPublish: '$(Build.SourcesDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
     mavenPomFile: 'program10/pom.xml'
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
