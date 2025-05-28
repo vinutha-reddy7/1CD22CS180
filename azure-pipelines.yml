@@ -10,8 +10,10 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: Maven@3
+- task: PublishBuildArtifacts@1
   inputs:
+    pathToPublish: '$(Build.SourcesDirectory)'
+    artifactName: 'drop'
     mavenPomFile: 'program10/pom.xml'
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
