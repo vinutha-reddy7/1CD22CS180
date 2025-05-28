@@ -13,7 +13,7 @@ steps:
 - task: PublishBuildArtifacts@1
   inputs:
     pathToPublish: '$(Build.SourcesDirectory)'
-    artifactName: 'drop'
+    artifactName: 'program10'
     mavenPomFile: 'program10/pom.xml'
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
