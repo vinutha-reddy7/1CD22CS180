@@ -44,6 +44,12 @@ application {
     mainClass = 'org.example.App'
 }
 
+task hello {
+ doLast {
+ println 'Hello from Groovy task!'
+ }
+ }
+
 tasks.named('test') {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
